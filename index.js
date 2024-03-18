@@ -13,8 +13,10 @@ app.post("/bfhl",(req,res)=>{
     const reqBody = req.body;
     console.log(reqBody);
 
-    const oddNumbers = reqBody.map((num)=>{
-        return typeof num === 'number'
+    const oddNumbers = reqBody.data.map((num)=>{
+        if(typeof num === "number" && num % 2 != 0){
+            return num;
+        }
     })
 
     // res.send(reqBody.data);
