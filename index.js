@@ -10,9 +10,10 @@ app.get("/",(req,res)=>{
 
 app.post("/bfhl",(req,res)=>{
 
+    const reqBody = req.body;
 
 
-    res.sendStatus(200).json({
+    res.json({
             "is_success": true,
             "user_id": "john_doe_17091999", "email" : "john@xyz.com",
             "roll_number":"ABCD123",
