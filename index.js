@@ -32,7 +32,7 @@ app.post("/bfhl",(req,res)=>{
                 evenNumber.push(i);
             }
         else{
-                evenNumber.push(i);
+                oddNumbers.push(i);
             }
     
     })
