@@ -8,9 +8,18 @@ app.get("/",(req,res)=>{
     res.send("API is healthy!");
 })
 
-app.post("/",(req,res)=>{
+app.post("/bfhl",(req,res)=>{
 
 
+
+    res.sendStatus(200).json({
+            "is_success": true,
+            "user_id": "john_doe_17091999", "email" : "john@xyz.com",
+            "roll_number":"ABCD123",
+            "odd_numbers": ["1"],
+            "even_numbers": ["334","4"],
+            "alphabets": ["A","R"]
+    })
     
 })
 
