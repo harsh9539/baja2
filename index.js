@@ -33,7 +33,7 @@ app.post("/bfhl",(req,res)=>{
         }
         else{
             let c = ele.toUpperCase();
-            alphabets.push(alphabets);
+            alphabets.push(c);
         };
     })
 
