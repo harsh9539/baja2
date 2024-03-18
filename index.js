@@ -23,18 +23,18 @@ app.post("/bfhl",(req,res)=>{
     const evenNumber = [];
     const alphabets = [];
     reqBody.data.forEach((ele)=>{
-        if(typeof ele === 'number'){
-            if(ele % 2 == 0){
-                evenNumber.push(ele);
-            }
-            else{
-                evenNumber.push(ele);
-            }
-        }
-        else{
+        const i = parseInt(ele);
+        if(isNaN(i)){
             let c = ele.toUpperCase();
             alphabets.push(c);
-        };
+        }
+        else if(i % 2 == 0){
+                evenNumber.push(i);
+            }
+        else{
+                evenNumber.push(i);
+            }
+    
     })
 
     // res.send(reqBody.data);
