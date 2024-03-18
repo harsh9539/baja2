@@ -1,7 +1,7 @@
 import express from "express";
 
 const app = express();
-
+app.use(express.json());
 
 
 app.get("/",(req,res)=>{
@@ -11,7 +11,15 @@ app.get("/",(req,res)=>{
 app.post("/bfhl",(req,res)=>{
 
     const reqBody = req.body;
+    console.log(reqBody);
 
+    const oddNumbers = reqBody.map((num)=>{
+        if (typeof num === "number"){
+            if(num % 2 != 0){
+                return num;
+            }
+        }
+    })
 
     res.json({
             "is_success": true,
