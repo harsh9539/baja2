@@ -28,7 +28,7 @@ app.post("/bfhl",(req,res)=>{
             let c = ele.toUpperCase();
             alphabets.push(c);
         }
-        else if(i % 2 == 0){
+        else if(i >= 2 && i % 2 == 0){
                 evenNumber.push(i);
             }
         else{
